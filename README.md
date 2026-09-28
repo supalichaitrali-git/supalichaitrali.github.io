@@ -76,9 +76,6 @@ Motichand Lengade Bhartesh Polytechnic College, Belagavi
 
 [**View / Download My Resume**](./Chaitrali_Umesh_Supali_Resume.pdf)
 
-## 🌐 Portfolio
-
-[**Visit My Portfolio Website**](https://supalichaitrali.github.io/)
 
 ---
 
