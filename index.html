@@ -1,31 +1,651 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Chaitrali Supali | DevOps & Cloud Engineer</title>
+
+    <meta
+        name="description"
+        content="Chaitrali Supali — Computer Science graduate targeting DevOps, Cloud Engineer, and Cloud Infrastructure roles."
+    >
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background: #f6f8fb;
+            color: #1f2937;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        /* Navigation */
+
+        nav {
+            background: #111827;
+            color: white;
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #d1d5db;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 90px 0;
+            background: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .hero h2 {
+            font-size: 26px;
+            font-weight: normal;
+            color: #4b5563;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #4b5563;
+            max-width: 760px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 8px;
+            background: #111827;
+            color: white;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .button.secondary {
+            background: #e5e7eb;
+            color: #111827;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 70px 0;
+        }
+
+        section:nth-child(even) {
+            background: white;
+        }
+
+        .section-title {
+            font-size: 30px;
+            margin-bottom: 30px;
+            color: #111827;
+        }
+
+        /* Skills */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #eef2ff;
+            color: #3730a3;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Projects */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        .tech {
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        .card li {
+            margin-bottom: 8px;
+        }
+
+        /* Experience */
+
+        .experience {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .experience h3 {
+            font-size: 22px;
+        }
+
+        .experience .company {
+            color: #4b5563;
+            margin-bottom: 18px;
+        }
+
+        /* Contact */
+
+        .contact-box {
+            background: #111827;
+            color: white;
+            border-radius: 14px;
+            padding: 40px;
+        }
+
+        .contact-box p {
+            margin: 10px 0;
+            color: #d1d5db;
+        }
+
+        .contact-box a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #0b1120;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .nav-content {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 14px;
+                font-size: 14px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 50px 0;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Chaitrali Supali</h1>
-    <h2>DevOps & Cloud Engineer</h2>
+    <!-- Navigation -->
 
-    <p>
-        Computer Science graduate interested in DevOps,
-        Cloud Infrastructure, Automation and AWS.
-    </p>
+    <nav>
+        <div class="container nav-content">
 
-    <h2>Skills</h2>
-    <p>
-        Linux | AWS | Python | Git | Docker | Terraform |
-        CI/CD | Kubernetes
-    </p>
+            <div class="logo">
+                Chaitrali Supali
+            </div>
 
-    <h2>Resume</h2>
-    <p>
-        <a href="Chaitrali_Umesh_Supali_Resume.pdf"
-            target="_blank">
-            View My Resume
-        </a>
-    </p>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+
+    <header class="hero">
+
+        <div class="container hero-content">
+
+            <h1>Chaitrali Supali</h1>
+
+            <h2>DevOps Engineer | Cloud Engineer | Cloud Infrastructure</h2>
+
+            <p>
+                Computer Science graduate targeting entry-level DevOps,
+                Cloud Engineer, and Cloud Infrastructure Engineer roles.
+                Hands-on with Linux, Bash, Python, Git/GitHub, and AWS.
+            </p>
+
+            <div class="buttons">
+
+                <a
+                    class="button"
+                    href="Chaitrali_Umesh_Supali_Resume.pdf"
+                    target="_blank"
+                >
+                    View Resume
+                </a>
+
+                <a
+                    class="button secondary"
+                    href="https://github.com/supalichaitrali-git"
+                    target="_blank"
+                >
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- About -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <h2 class="section-title">About Me</h2>
+
+            <p>
+                I am a Computer Science graduate building my career in
+                DevOps and Cloud Infrastructure. I have hands-on experience
+                with Linux administration, Bash scripting, Python, Git/GitHub,
+                and AWS services including EC2, IAM, and CloudWatch.
+            </p>
+
+            <br>
+
+            <p>
+                I am currently strengthening my skills in AWS, automation,
+                Terraform, and infrastructure engineering through
+                hands-on learning and projects.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <h2 class="section-title">Technical Skills</h2>
+
+            <div class="skills">
+
+                <span class="skill">AWS</span>
+                <span class="skill">EC2</span>
+                <span class="skill">IAM</span>
+                <span class="skill">CloudWatch</span>
+                <span class="skill">Linux</span>
+                <span class="skill">Bash</span>
+                <span class="skill">Python</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Git</span>
+                <span class="skill">GitHub</span>
+                <span class="skill">MySQL</span>
+                <span class="skill">SQLite</span>
+                <span class="skill">FastAPI</span>
+                <span class="skill">REST APIs</span>
+                <span class="skill">Postman</span>
+                <span class="skill">Terraform</span>
+                <span class="skill">Docker</span>
+                <span class="skill">CI/CD</span>
+                <span class="skill">Kubernetes</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <h2 class="section-title">Projects</h2>
+
+            <div class="projects">
+
+                <div class="card">
+
+                    <h3>Linux System Health Monitor</h3>
+
+                    <div class="tech">
+                        Bash • Linux
+                    </div>
+
+                    <ul>
+                        <li>
+                            Modular Bash-based Linux monitoring tool.
+                        </li>
+
+                        <li>
+                            Monitors CPU, memory, disk, processes,
+                            users, load average, system and network health.
+                        </li>
+
+                        <li>
+                            Includes configuration files, health checks,
+                            structured logging and command-line arguments.
+                        </li>
+
+                        <li>
+                            Uses standard Linux utilities including
+                            awk, grep, cut, top, free, df, ps and bc.
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>ChaitraliAI — AI Voice Interview Agent</h3>
+
+                    <div class="tech">
+                        FastAPI • Python • REST APIs • Google Gemini API
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            Web-based AI interview agent generating
+                            responses based on candidate-specific information.
+                        </li>
+
+                        <li>
+                            Includes interview sessions, conversation history,
+                            reset functionality and session logging.
+                        </li>
+
+                        <li>
+                            Includes a backend health-check endpoint.
+                        </li>
+
+                        <li>
+                            Frontend and backend deployed over HTTPS using Render.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Experience -->
+
+    <section id="experience">
+
+        <div class="container">
+
+            <h2 class="section-title">Experience</h2>
+
+            <div class="experience">
+
+                <h3>Software Testing Intern</h3>
+
+                <p class="company">
+                    Infynow Software Solutions LLP • Kolhapur, Maharashtra
+                    <br>
+                    January 2026 – April 2026
+                </p>
+
+                <ul>
+
+                    <li>
+                        Tested REST APIs using Postman for Django-based
+                        web applications.
+                    </li>
+
+                    <li>
+                        Used SQLite queries to validate backend data integrity.
+                    </li>
+
+                    <li>
+                        Performed functional, regression and end-to-end testing.
+                    </li>
+
+                    <li>
+                        Documented defects and verified fixes.
+                    </li>
+
+                    <li>
+                        Collaborated with developers in an Agile SDLC environment.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-title">Education</h2>
+
+            <div class="card">
+
+                <h3>Bachelor of Engineering in Computer Science</h3>
+
+                <p>
+                    KLE Technological University,
+                    Dr. M. S. Sheshgiri Campus, Belagavi
+                </p>
+
+                <p>
+                    2023 – 2026
+                </p>
+
+                <br>
+
+                <h3>Diploma in Electronics and Communication</h3>
+
+                <p>
+                    Motichand Lengade Bhartesh Polytechnic College,
+                    Belagavi
+                </p>
+
+                <p>
+                    2020 – 2023
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="contact-box">
+
+                <h2>Let's Connect</h2>
+
+                <p>
+                    📧
+                    <a href="mailto:supalichaitri@gmail.com">
+                        supalichaitri@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    💻
+                    <a
+                        href="https://github.com/supalichaitrali-git"
+                        target="_blank"
+                    >
+                        GitHub
+                    </a>
+                </p>
+
+                <p>
+                    🔗
+                    <a
+                        href="https://www.linkedin.com/in/chaitrali-supali/"
+                        target="_blank"
+                    >
+                        LinkedIn
+                    </a>
+                </p>
+
+                <br>
+
+                <a
+                    class="button"
+                    href="Chaitrali_Umesh_Supali_Resume.pdf"
+                    target="_blank"
+                >
+                    Download / View Resume
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Chaitrali Supali • DevOps & Cloud Engineering
+        </p>
+
+    </footer>
 
 </body>
 </html>
